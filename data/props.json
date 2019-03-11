@@ -1,0 +1,156 @@
+{
+	"props": {
+		"stairsDown": {
+			"name": "Staircase Down",
+			"character": ">",
+			"color": "#eee",
+			"stairLink": "stairsUp"
+		},
+		"stairsUp": {
+			"name": "Staircase Up",
+			"character": "<",
+			"color": "#bbb"
+		},
+
+		"alembic": {
+			"name": "alembic",
+			"character": "⚗",
+			"color": "#f99",
+			"inventorySize": 1,
+			"use": {
+				"requires": [
+					{ "item": "gold" }
+				],
+				"message": "You brew some Gold-Stout, a wonderfully healing drink!",
+				"missingMessage": "You have no idea how alchemy works, but you assume it requires gold.",
+				"effects": [ "hp", "hp" ]
+			}
+		},
+		"chair": {
+			"name": "chair",
+			"character": "⑁",
+			"color": "#ccb",
+			"use": {
+				"message": "You rest on the seat for a moment.",
+				"effects": [ "bp", "ep" ]
+			}
+		},
+		"chest": {
+			"name": "Chest",
+			"character": "⊟", "_c": "⍞⬒🛢",
+			"color": "#35e",
+			"inventorySize": 3
+		},
+		"dirt": {
+			"name": "dirt",
+			"character": ".",
+			"color": "#960"
+		},
+		"door": {
+			"name": "Door",
+			"character": "+", "_c": "◫",
+			"states": {
+				"open": {
+					"character": "'"
+				}
+			},
+			"color": "#b93",
+			"use": {
+				"message": "The door seems to be broken."
+			}
+		},
+		"extractor": {
+			"name": "Sunstone Extractor",
+			"character": "⌼",
+			"surrounding": ["ⵖ", "⊣", "⋑", "⊣", "⏚", "⊢", "⋐", "⊢"],
+			"color": "#f99",
+			"inventorySize": 1,
+			"use": {
+				"requires": [
+					{ "item": "sunstone" }
+				],
+				"message": "You activate the extractor...",
+				"missingMessage": "A sunstone is required. (You must drop it on the same space)",
+				"effects": [
+					"message",
+					"score1000",
+					"gameOver",
+					"fire",
+					"damage"
+				]
+			}
+		},
+		"executionSwitch": {
+			"name": "Execution switch",
+			"character": "⍎",
+			"color": "#fa8",
+			"use": {
+				"message": "As you press the switch, you feel a jolt of aggressive energy.",
+				"effects": [ "ap", "ap" ]
+			}
+		},
+		"gizmo": {
+			"name": "mysterious gizmo",
+			"character": "⧮",
+			"color": "#a88",
+			"illumination": 1,
+			"use": {
+				"message": "You have never seen technology like this before."
+			}
+		},
+		"grass": {
+			"name": "grass",
+			"character": "\"",
+			"color": "#4c4"
+		},
+		"lamp": {
+			"name": "lamp",
+			"character": "⍝",
+			"color": "#ffc",
+			"illumination": 2,
+			"use": {
+				"message": "The lamp has a firey glow."
+			}
+		},
+		"machinery": {
+			"name": "Machinery",
+			"character": "ⴼ", "_c": "ⵄⵖ",
+			"color": "#fa8",
+			"use": {
+				"message": "You attempt to fiddle with it but realize you might accidentally lose a finger in one of the gears.",
+				"effects": [ "bpDamage" ]
+			}
+		},
+		"pedestal": {
+			"name": "Pedestal",
+			"character": "¶", "_c": "Ī¶𐀚𐀙",
+			"color": "#f99"
+		},
+		"rubble": {
+			"name": "Rubble",
+			"character": "∴",
+			"color": "#aaa"
+		},
+		"shelves": {
+			"name": "shelves",
+			"character": "▤",
+			"color": "#971",
+			"use": {
+				"message": "You look through the shelves and find ancient books of knowledge. Too bad you can't read."
+			}
+		},
+		"table": {
+			"name": "Table",
+			"character": "⊓", "_c": "⊓ᚂ⊏⊐",
+			"color": "#ccb",
+			"states": {
+				"flipped": {
+					"character": "⊔"
+				}
+			},
+			"use": {
+				"message": "You try to flip the table but you're not strong or angry enough."
+			}
+		}
+	}
+}
