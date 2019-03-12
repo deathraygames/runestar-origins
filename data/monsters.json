@@ -39,7 +39,7 @@
 		},
 		"o": {
 			"name": "orc",
-			"character": "orc",
+			"character": "o",
 			"color": "#5f5",
 			"hp": 4,
 			"sightRange": 5
