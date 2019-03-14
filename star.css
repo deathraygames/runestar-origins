@@ -187,6 +187,11 @@ h1 {
 		margin-left: 3em;
 		max-width: 16em;
 		font-size: 80%;
+		color: #666;
+	}
+	.abilities li .description .ability-description {
+		color: #ddd;
+		margin-bottom: 0.2em;
 	}
 	.abilities li:hover .description {
 		display: block;

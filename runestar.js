@@ -9,7 +9,8 @@ var g = new rote.Game({
 		props: 'data/props.json',
 		levels: 'data/levels.json',
 		abilities: 'data/abilities.json',
-		playlist: 'data/playlist.json'
+		playlist: 'data/playlist.json',
+		dungeon: 'data/dungeon.json',
 	},
 	customEffects: {
 		gameOver: gameOver,
@@ -82,7 +83,7 @@ function getAbilityHtml(hero, index) {
 }
 
 function getPoolHtml(key, a, b, c) {
-	return `<span class="pool ${key}-pool">${rote.Display.getPoolSquares(a, b, c)}</span>`
+	return `<span class="pool ${key}-pool" title="${a}/${b}">${rote.Display.getPoolSquares(a, b, c)}</span>`
 }
 
 function runGame () {
@@ -134,12 +135,7 @@ function runGame () {
 		}		
 	};
 	// Build the game world
-	g.createLevels([
-		'town',
-		{ levelTypeKey: 'dungeon', repeat: 7 },
-		'docks',
-		'gizmo',
-	], seed);
+	g.createLevels(g.data.dungeon, seed);
 	const bottomLevel = g.levels[g.levels.length - 1];
 	setupMachinery(bottomLevel);
 	const topLevel = g.levels[0];
@@ -153,6 +149,7 @@ function runGame () {
 	const stairs = topLevel.props.find((prop) => { return prop.type === 'stairsDown'; });
 	topLevel.discoverCircle(stairs.x, stairs.y, 3);
 	// Start the game
+	// TODO: move these to a state transition to GAME
 	setTimeout(() => {
 		g.print('A mysterious, pale dwarf tells you there is a powerful sunstone on this floor that is damaged and needs to be taken to the bottom floor for safety.', 'plot');
 	}, 1000);
@@ -163,4 +160,4 @@ function runGame () {
 	g.start();
 }
 
-g.ready(runGame);
+g.ready(runGame, ['Fix15MonoBold']);

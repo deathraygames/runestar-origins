@@ -89,8 +89,8 @@
 		},
 		"gizmo": {
 			"name": "Gizmo Room (Final Level)",
-			"color": "#747",
-			"background": "#202",
+			"color": "#746",
+			"background": "#201",
 			"description": "This dark floor smells of death.",
 			"map": { "type": "digger", "walls": true },
 			"stairsUp": 1,

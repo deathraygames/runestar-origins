@@ -47,7 +47,7 @@
 		"s": {
 			"name": "spider", "plural": "spiders",
 			"character": "s", "altCharacters": "🕷ⵥ",
-			"color": "#c0f",
+			"color": "#a0f",
 			"hp": 4,
 			"sightRange": 5
 		},

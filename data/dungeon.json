@@ -1,0 +1,8 @@
+{
+	"dungeon": [
+		"town",
+		{ "levelTypeKey": "dungeon", "repeat": 7 },
+		"docks",
+		"gizmo"
+	]
+}
